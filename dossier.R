@@ -31,3 +31,13 @@ for (pagenum2 in nbr_pages) {
 all_synopsis
 
 serieees = data.frame(all_names,all_synopsis)
+
+
+
+
+
+
+
+
+
+je test github
