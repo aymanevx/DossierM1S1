@@ -36,8 +36,3 @@ serieees = data.frame(all_names,all_synopsis)
 
 
 
-
-
-
-
-je test github
