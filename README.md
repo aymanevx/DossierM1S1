@@ -3,7 +3,6 @@
 
 - [Description](#description)
 - [Démo](#démo)
-- [Structure du projet](#structure)
 - [Pré-requis](#pré-requis)
 - [Installation](#installation)
 - [Explication](#explication)
