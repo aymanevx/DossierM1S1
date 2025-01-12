@@ -37,7 +37,7 @@ Les données sur les séries viennent du site Allocine et ont été webscraper g
 Ensuite on à utiliser un modèle d'embedding de Open AI en utilisant leurs API, grace a cela on crée le fichier contenant les embeddings (transformer des mots pour que le code comprennent le sens de ces mots). Le code correspondant est mis à disposition sous le nom "embeddingserie" mais nécessite une clé Open AI pour être éxecuté.
 Enfin grâce aux 2 fichiers et à une série choisit en entrée, le modèle trouve la série en entrée son synopsis correspondant et l'embedding, il calcul ensuite la similarité cosinus avec toutes les séries puis nous sort les 3 qui ont la valeurs la plus élevé.
 
-##Utilisation
+## Utilisation
 
 En mettant le code Outilderecherchedeseriesimilaire.R dans R en appelant les 2 bases de données. Il suffit de mettre le nom d'une série dans input_series et d'éxcuter la fonction pour avoir le résultats corréspondant
 
