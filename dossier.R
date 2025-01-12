@@ -1,4 +1,4 @@
-Library(dplyr)
+library(dplyr)
 data = read_csv("chemin d'accès au csv toutsurserie")
 all_synopsis_embeddings = as.matrix(read.csv("chemin d'accès vers le csv embeddings synopsis"))
 
