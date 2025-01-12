@@ -42,8 +42,8 @@ Enfin grâce aux 2 fichiers et à une série choisit en entrée, le modèle trou
 En mettant le code Outilderecherchedeseriesimilaire.R dans R en appelant les 2 bases de données. Il suffit de mettre le nom d'une série dans input_series et d'éxcuter la fonction pour avoir le résultats corréspondant
 
 ## Auteurs 
-- Aymane AIBICHI
-- Zineb MANAR
+- Aymane AIBICHI : [@aymanevx](https://github.com/aymanevx)
+- Zineb MANAR : [@ZinebMnr](https://github.com/ZinebMnr)
   
 
 
