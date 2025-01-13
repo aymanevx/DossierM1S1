@@ -11,7 +11,7 @@
 
 ## Description
 
-Ce projet est un projet qui a pour objectif de permettre à l'utilisateur, à partir d'une série qui sera choisit en entrée avoir 3 séries similaires en sortie en ce basant uniquement sur les synopsis et en utilisant de l'embedding (Open AI)
+Ce projet a pour objectif de permettre à l'utilisateur, à partir d'une série choisie en entrée, d'obtenir trois séries similaires en sortie, en se basant uniquement sur les synopsis et en utilisant la technologie des embeddings (OpenAI).
 
 ## Démo 
 
@@ -22,23 +22,26 @@ Ce projet est un projet qui a pour objectif de permettre à l'utilisateur, à pa
 
 ## Pré-requis
 1. Un ordinateur sous windows.
-2. Installer Rstudio.
-3. Installer le package dplyr et readr sur R
-4. Installer la base de données (toutsurserie,disponible dans ce projet) comportant toutes les titres de séries et leurs synopsis (qui ont été scraper sur Allocine)
-5. Installer la base de données embedingai sur ce lien https://drive.google.com/drive/u/0/folders/1yRTKM-bMtnJP__s37f7DxQWPChWRMUHt qui contient les embeddings des synopsis et qui vont permettre de trouver les séries similaires.
-
+2. Installation de Rstudio.
+3. Installation des packages dplyr et readr dans R
+4. Téléchargement de la base de données toutsurserie (disponible dans ce projet), contenant tous les titres de séries et leurs synopsis, récupérés par web scraping sur Allociné.
+5. Téléchargement de la base de données embedingai via ce lien https://drive.google.com/drive/u/0/folders/1yRTKM-bMtnJP__s37f7DxQWPChWRMUHt Cette base contient les embeddings des synopsis, nécessaires pour identifier les séries similaires.
+   
 ## Installation
-- Prendre le code Outilderecherchedeseriesimilaire pour pouvoir l'utiliser sur R
-- Installer les 2 bases, toutsurserie disponible ici et embedingai sur ce lien https://drive.google.com/drive/u/0/folders/1yRTKM-bMtnJP__s37f7DxQWPChWRMUHt
-- installer les 2 packages en utilisant install.packages sur R
+1. Obtenez le code : Téléchargez le code Outilderecherchedeseriesimilaire pour l'utiliser dans R.
+2. Installez les bases de données :
+- Téléchargez les fichiers toutsurserie et embedingai depuis https://drive.google.com/drive/u/0/folders/1yRTKM-bMtnJP__s37f7DxQWPChWRMUHt
+3. Installez les packages nécessaires :
+- Utilisez la commande install.packages dans R pour installer les packages requis.
 
 ## Explication
-- Les données sur les séries viennent du site Allocine et ont été webscraper grâce à l'extension SelectorGadget et le package rvest. Le code correspondant est mis à disposition sous le nom "websraperinfoserie"
-- Ensuite on à utiliser un modèle d'embedding de Open AI en utilisant leurs API, grace a cela on crée le fichier contenant les embeddings (transformer des mots pour que le code comprennent le sens de ces mots). Le code correspondant est mis à disposition sous le nom "embeddingserie" mais nécessite une clé Open AI pour être éxecuté.
-- Enfin grâce aux 2 fichiers et à une série choisit en entrée, le modèle trouve la série en entrée son synopsis correspondant et l'embedding, il calcul ensuite la similarité cosinus avec toutes les séries puis nous sort les 3 qui ont la valeurs la plus élevé.
+  Les données sur les séries proviennent du site Allociné et ont été collectées par web scraping à l'aide de l'extension SelectorGadget et du package rvest. Le code correspondant est disponible sous le nom "webscraperinfoserie".
+  Ensuite, nous avons utilisé un modèle d'embedding d'OpenAI via leur API. Cela nous a permis de créer un fichier contenant les embeddings (représentations vectorielles des mots, permettant au code de comprendre le sens des textes). Le code correspondant est disponible sous le nom "embeddingserie", mais il nécessite une clé API OpenAI pour être exécuté.
+  Enfin, en utilisant ces deux fichiers et une série choisie en entrée, le modèle identifie la série sélectionnée, son synopsis correspondant et son embedding. Il calcule ensuite la similarité cosinus avec toutes les autres séries, puis renvoie les trois séries ayant les scores de similarité les plus élevés.
 
 ## Utilisation
-En mettant le code Outilderecherchedeseriesimilaire.R dans R en appelant les 2 bases de données. Il suffit de mettre le nom d'une série dans input_series et d'éxcuter la fonction pour avoir le résultat corréspondant
+  Pour utiliser cet outil, placez le fichier Outilderecherchedeseriesimilaire.R dans R et assurez-vous de charger les deux bases de données nécessaires.
+  Il suffit ensuite de renseigner le nom d'une série dans la variable input_series et d'exécuter la fonction pour obtenir le résultat correspondant.
 
 ## Auteurs 
 - Aymane AIBICHI : [@aymanevx](https://github.com/aymanevx)
