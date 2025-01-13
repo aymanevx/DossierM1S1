@@ -6,6 +6,7 @@ all_synopsis_embeddings = as.matrix(read.csv("chemin d'accès vers le csv embedd
 # Fonction pour calculer la similarité cosinus
 cosine_similarity = function(vec1, vec2) {
   sum(vec1 * vec2) / (sqrt(sum(vec1^2)) * sqrt(sum(vec2^2)))
+  }
 
 # Fonction pour trouver les séries similaires
 find_similar_series = function(input_series, data, embeddings, top_n = 3) {
