@@ -1,4 +1,5 @@
 library(dplyr)
+library(readr)
 data = read_csv("chemin d'accès au csv toutsurserie")
 all_synopsis_embeddings = as.matrix(read.csv("chemin d'accès vers le csv embeddings synopsis"))
 
@@ -42,4 +43,4 @@ find_similar_series = function(input_series, data, embeddings, top_n = 3) {
 }
 
 input_series = "La série choisit (écrit de manière exact)"
-top_similar_series <- find_similar_series(input_series, data, all_synopsis_embeddings)
+find_similar_series(input_series, data, all_synopsis_embeddings)
